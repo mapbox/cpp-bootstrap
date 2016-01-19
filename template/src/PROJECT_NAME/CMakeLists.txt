@@ -3,3 +3,6 @@ set(CMAKE_CXX_FLAGS "-O2 -std=c++14 -Wall -Wextra")
 add_library(PROJECT_NAME
     PROJECT_NAME.cpp
 )
+
+install(TARGETS PROJECT_NAME DESTINATION lib)
+install(FILES "${PROJECT_SOURCE_DIR}/include/PROJECT_NAME/PROJECT_NAME.hpp" DESTINATION include)
