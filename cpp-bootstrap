@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+NAME=$(basename `pwd`)
+read -p "Project name [${NAME}]: " INPUT
+NAME=${INPUT:-${NAME}}
+SRC=$(dirname "${BASH_SOURCE[0]}")/template
+FILES=$(cd "${SRC}" && find . -type f -not -name ".DS_Store")
+
+for FILE in ${FILES}; do
+    mkdir -p "$(dirname "${FILE//PROJECT_NAME/${NAME}}")"
+    sed "s/PROJECT_NAME/${NAME}/g" "${SRC}/${FILE}" > "${FILE//PROJECT_NAME/${NAME}}"
+done
