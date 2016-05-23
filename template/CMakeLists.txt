@@ -5,5 +5,10 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 
 add_subdirectory(src)
 
-# enable_testing()
-# add_subdirectory(test)
+
+option(ENABLE_TESTING "Enable testing" OFF)
+
+if (${ENABLE_TESTING})
+  enable_testing()
+  add_subdirectory(test)
+endif()
