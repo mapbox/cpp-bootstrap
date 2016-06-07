@@ -1,6 +1,5 @@
-set(CMAKE_CXX_FLAGS "-O2 -std=c++14 -Wall -Wextra")
-
 add_library(PROJECT_NAME
+    ${PROJECT_SOURCE_DIR}/include/PROJECT_NAME/PROJECT_NAME.hpp
     PROJECT_NAME.cpp
 )
 
@@ -10,3 +9,5 @@ target_include_directories(PROJECT_NAME
 )
 
 target_add_mason_package(PROJECT_NAME PUBLIC variant)
+
+create_source_groups(PROJECT_NAME)

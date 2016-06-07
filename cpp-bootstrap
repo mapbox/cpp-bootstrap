@@ -11,4 +11,6 @@ for FILE in ${FILES}; do
     sed "s/PROJECT_NAME/${NAME}/g" "${SRC}/${FILE}" > "${FILE//PROJECT_NAME/${NAME}}"
 done
 
+git init
 git submodule add https://github.com/mapbox/mason.git .mason
+git submodule update --init
