@@ -1,10 +1,7 @@
-#ifndef PROJECT_NAME_PROJECT_NAME
-#define PROJECT_NAME_PROJECT_NAME
+#pragma once
 
 namespace PROJECT_NAME {
 
 extern const char* text;
 
-}
-
-#endif
+} // namespace PROJECT_NAME

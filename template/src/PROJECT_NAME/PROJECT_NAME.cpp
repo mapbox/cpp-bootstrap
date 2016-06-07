@@ -4,4 +4,4 @@ namespace PROJECT_NAME {
 
 const char* text = "Hello World!";
 
-}
+} // namespace PROJECT_NAME

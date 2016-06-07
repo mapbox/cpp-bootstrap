@@ -10,3 +10,5 @@ for FILE in ${FILES}; do
     mkdir -p "$(dirname "${FILE//PROJECT_NAME/${NAME}}")"
     sed "s/PROJECT_NAME/${NAME}/g" "${SRC}/${FILE}" > "${FILE//PROJECT_NAME/${NAME}}"
 done
+
+git submodule add https://github.com/mapbox/mason.git .mason
