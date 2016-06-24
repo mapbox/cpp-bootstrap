@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.0 FATAL_ERROR)
-project(regl LANGUAGES CXX C)
+project(PROJECT_NAME LANGUAGES CXX C)
 
 include(cmake/build.cmake)
 include(cmake/mason.cmake)
