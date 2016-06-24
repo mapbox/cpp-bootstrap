@@ -2,4 +2,4 @@ add_subdirectory(PROJECT_NAME)
 
 # Example executable that uses libPROJECT_NAME:
 add_executable(main main.cpp)
-target_link_libraries(main PROJECT_NAME)
+target_link_libraries(main PRIVATE PROJECT_NAME)
